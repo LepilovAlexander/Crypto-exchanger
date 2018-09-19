@@ -1,0 +1,296 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus,
+textarea:focus {
+  outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.main {
+  background: url(../img/background.png) no-repeat;
+  background-size: cover;
+  background-position-x: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  font-size: 15px;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
+}
+.container::after {
+  clear: both;
+}
+.selector {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  width: 66%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(31, 39, 48, 0.2);
+  border: solid 1px #2b3b45;
+}
+.selector h1 {
+  color: #fff;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.selector .dropdown {
+  margin-left: 12rem;
+  position: relative;
+  display: inline-block;
+}
+.selector .dropdown a {
+  color: #999999;
+  padding: 1rem 0.7rem;
+  text-decoration: none;
+  display: flex;
+  padding-left: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+.selector .dropdown a:hover {
+  transform: scale(1.1);
+}
+.selector .dropdown .selector-menu-btn {
+  display: flex;
+  cursor: pointer;
+  border: solid 1px #92e8fe;
+  background-color: rgba(31, 39, 48, 0.31);
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.7rem 10.5rem 0.7rem 0;
+}
+.selector .dropdown .selector-menu-btn::after {
+  content: '';
+  position: absolute;
+  left: 12.8rem;
+  top: 1.5rem;
+  padding: 1rem;
+  z-index: 85;
+  background: url(../img/arrow.png) no-repeat;
+  background-size: 30%;
+}
+.selector .dropdown a {
+  color: #999999;
+  padding: 0.3rem 1rem;
+  text-decoration: none;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  transition: transform .3s linear;
+}
+.selector .dropdown a:hover {
+  transform: scale(1.1);
+  transition: transform .3s linear;
+}
+.selector .dropdown .dropdown-child {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+}
+.selector .dropdown .dropdown-child .border {
+  border-radius: 0.5rem;
+  margin-top: 0.4rem;
+  border: solid 1px #92e8fe;
+  background-color: #1f2730;
+  width: 100%;
+}
+.selector .dropdown:hover .dropdown-child {
+  display: block;
+}
+.crypto-block {
+  margin-top: 3rem;
+  width: 74%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.crypto-block .c-item {
+  display: flex;
+  min-width: 300px;
+  justify-content: center;
+  background-size: 100%;
+  background-position: center;
+  margin: 2rem;
+}
+.crypto-block .c-item .card {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.crypto-block .c-item .card-row {
+  display: flex;
+}
+.crypto-block .c-item .card-header {
+  padding-top: 1.4rem;
+  margin: 0 auto;
+  margin-bottom: 11rem;
+}
+.crypto-block .c-item .card-header h4 {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.crypto-block .ethereum {
+  background: url(../img/ethereum.png) no-repeat;
+  background-size: cover;
+  background-position-x: 35%;
+}
+.crypto-block .litecoin {
+  background: url(../img/litecoin.png) no-repeat;
+  background-size: cover;
+  background-position-x: 35%;
+}
+.crypto-block .bitcoin {
+  background: url(../img/bitcoin.png) no-repeat;
+  background-size: cover;
+  background-position-x: 50%;
+}
+.crypto-block .c-item:last-child {
+  clear: both;
+}
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.card-content {
+  width: 100%;
+}
+.card-content .prise p {
+  display: flex;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  text-align: start;
+  padding: 0 1.5rem 0 1.5rem;
+}
+.card-content .per-change p {
+  display: flex;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  text-align: start;
+  padding: 0 1.5rem 0 1.5rem;
+}
+.card-content .per-change .swich-container {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem 0 1.5rem;
+}
+.card-content .per-change .swicher-input {
+  display: none;
+}
+.card-content .per-change .swicher-label {
+  display: inline-block;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+}
+.card-content .per-change .swicher-label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1rem;
+  background: #3aa5da;
+  border-radius: 0.8rem;
+}
+.card-content .per-change .swicher-label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: url(../img/round.png) no-repeat;
+  background-size: 175%;
+  background-position: 55% 52%;
+  background-color: transparent;
+  border-radius: 50%;
+  top: -0.17rem;
+  bottom: 0.17rem;
+  left: -0.2rem;
+  right: 0.2rem;
+  transition: transform .5s linear;
+}
+.card-content .per-change .swicher-label:active::after {
+  transform: translateX(1.4rem);
+}
+.card-content .per-change .swicher-input:checked + .swicher-label::before {
+  background-color: #b7b8b8;
+  transition: background-color 0.5s linear;
+}
+.card-content .per-change .swicher-input:checked + .swicher-label::after {
+  transform: translateX(1.4rem);
+  transition: transform .5s linear;
+}
+.card-content .per-change .swicher-input:checked + .swicher-label:active::after {
+  transform: translateX(1.4rem);
+}
+.card-content .per-change .swicher-input:checked + .swicher-label:active::before {
+  background-color: #eaebeb;
+  transition: background-color 0.5s linear;
+}
+.card-values {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+}
+.card-values p {
+  display: block;
+  padding: 0 1.5rem 0 1.5rem;
+  color: #a6a6a6;
+  font-size: 12px;
+}
+.card-values p span {
+  color: #6dbc45;
+  font-weight: bold;
+}
+@media screen and (max-width: 1326px) {
+  div.selector {
+    flex-direction: column;
+  }
+  div.selector h1 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  div.selector div.dropdown {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 968px) {
+  div.selector,
+  div.crypto-block {
+    width: 90%;
+  }
+}
